@@ -1,26 +1,26 @@
-<script>
-    import PrimaryButton from "../components/PrimaryButton.svelte";
-    import Image from "../components/Image.svelte";
+<script lang="ts">
+    import Title from "../components/Title.svelte";
+    import AutoTyper from "../components/AutoTyper.svelte";
 </script>
 
-<div id="welcome">
-    <p class="big-text">Hello, I'm a fullstack developer 👋</p>
-    <PrimaryButton link="projects" text="follow the snake &#8605;" isShaking={true} />
-</div>
-
-<Image src="home.png" alt="welcoming snake" height={55} />
+<section>
+    <Title />
+    <AutoTyper />
+</section>
 
 <style>
-    #welcome {
+    section {
+        color: var(--text-primary);
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 1em;
+        gap: 2em;
+        min-height: 100%;
+        max-width: 600px;
     }
 
-    p {
-        font-size: 2rem;
-        margin: 0;
-        text-align: center;
+    @media (orientation: portrait) {
+        section {
+            max-width: 100%;
+        }
     }
 </style>
