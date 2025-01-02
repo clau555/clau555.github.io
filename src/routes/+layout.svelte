@@ -14,8 +14,8 @@
 {#if pageName === "/"}
     <div id="background-image" />
     <div id="gradient" />
+    <Pattern />
 {/if}
-<Pattern />
 <div id="main-container">
     <Navbar />
     <div id="page">

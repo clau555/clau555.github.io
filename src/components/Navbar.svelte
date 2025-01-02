@@ -5,7 +5,7 @@
     const pages: { label: string; link: string }[] = [
         { label: "/home", link: "/" },
         { label: "/dev", link: "" },
-        { label: "/art", link: "" },
+        { label: "/art", link: "/art" },
         { label: "/blog", link: "" }
     ];
 
@@ -124,7 +124,7 @@
         gap: 0.2em;
     }
 
-    @media (orientation: portrait) {
+    @media (max-width: 800px) {
         .desktop {
             display: none;
         }
