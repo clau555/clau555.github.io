@@ -60,7 +60,7 @@
     <div class="mobile panel">
         <div>
             {#each pages as { label, link }}
-                <LinkItem {label} {link} />
+                <LinkItem {label} {link} on:click={togglePannel} />
             {/each}
         </div>
         <div>

@@ -1,5 +1,8 @@
 <script lang="ts">
     import { page } from "$app/stores";
+    import { createEventDispatcher } from "svelte";
+
+    const dispatch = createEventDispatcher();
 
     export let label: string;
     export let link: string;
@@ -14,7 +17,12 @@
         🚧
     </div>
 {:else}
-    <a class:highlighted={isHighlighted} href={link} aria-current={$page.url.pathname === link}>
+    <a
+        class:highlighted={isHighlighted}
+        href={link}
+        aria-current={$page.url.pathname === link}
+        on:click={() => dispatch("click")}
+    >
         {label}
     </a>
 {/if}
