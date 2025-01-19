@@ -84,7 +84,6 @@
 
         border-bottom: solid 1px var(--background-secondary);
         background-color: var(--background-primary);
-        backdrop-filter: blur(8px);
         padding: 0.5em 1em;
     }
 
@@ -147,7 +146,6 @@
 
             border-bottom: solid 1px var(--background-secondary);
             background-color: var(--background-primary);
-            backdrop-filter: blur(8px);
             padding: 1em;
         }
     }

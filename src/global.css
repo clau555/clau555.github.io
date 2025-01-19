@@ -50,8 +50,15 @@ body {
     height: 100%;
 }
 
+@font-face {
+    font-family: "Jetbrains Mono";
+    src: url("JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: "Courier New", Courier, monospace;
+    font-family: "JetBrains Mono", monospace;
     color: var(--text-primary);
     scrollbar-width: thin;
     scrollbar-color: var(--accent) transparent;
