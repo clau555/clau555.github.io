@@ -3,7 +3,7 @@
     import { globalTheme } from "../store.js";
 
     const THEMES: string[] = ["dark", "light"];
-    let theme: string = "";
+    let theme: string = $state("");
 
     function getPreferredTheme(): string {
         return window.matchMedia("(prefers-color-scheme: dark)").matches ? THEMES[0] : THEMES[1];
@@ -29,7 +29,7 @@
     onMount(initTheme);
 </script>
 
-<button on:click={toggleTheme}>
+<button onclick={toggleTheme}>
     {#if theme === THEMES[0]}
         <svg
             xmlns="http://www.w3.org/2000/svg"

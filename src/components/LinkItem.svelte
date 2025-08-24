@@ -4,9 +4,12 @@
 
     const dispatch = createEventDispatcher();
 
-    export let label: string;
-    export let link: string;
-    export let isHighlighted: boolean = false;
+    interface Props {
+        label: string;
+        link: string;
+        isHighlighted?: boolean;
+    }
+    let { label, link, isHighlighted = false }: Props = $props();
 </script>
 
 {#if link === ""}
@@ -21,7 +24,7 @@
         class:highlighted={isHighlighted}
         href={link}
         aria-current={$page.url.pathname === link}
-        on:click={() => dispatch("click")}
+        onclick={() => dispatch("click")}
     >
         {label}
     </a>

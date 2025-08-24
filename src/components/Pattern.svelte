@@ -7,9 +7,9 @@
     const MAX_WAVE_ITERATIONS: number = 3;
 
     let animating: boolean = true;
-    let columns: number = 0;
-    let rows: number = 0;
-    let tiles: number[] = [];
+    let columns: number = $state(0);
+    let rows: number = $state(0);
+    let tiles: number[] = $state([]);
 
     function resizeGrid() {
         columns = ~~(window.innerWidth / TILE_SIZE);
@@ -106,7 +106,7 @@
     "
 >
     {#each tiles as _, index}
-        <div class="tile" id="tile-{index}" />
+        <div class="tile" id="tile-{index}"></div>
     {/each}
 </div>
 

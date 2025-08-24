@@ -11,9 +11,9 @@
     const maxTypingDelay: number = 150;
 
     let typing: boolean = true;
-    let text: string = cursor;
+    let text: string = $state(cursor);
     let index: number = 0;
-    let autoTyper: HTMLElement;
+    let autoTyper: HTMLElement = $state();
 
     function typeText(): void {
         if (!typing) return;

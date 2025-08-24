@@ -19,7 +19,7 @@
         }
     ];
 
-    let pannelOpened: boolean = false;
+    let pannelOpened: boolean = $state(false);
 
     function togglePannel() {
         pannelOpened = !pannelOpened;
@@ -40,7 +40,7 @@
         <ThemeSwitcher />
     </div>
     <div class="mobile menu">
-        <button on:click={togglePannel}>
+        <button onclick={togglePannel}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"

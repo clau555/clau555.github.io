@@ -3,8 +3,14 @@
     import "../global.css";
     import Pattern from "../components/Pattern.svelte";
     import Navbar from "../components/Navbar.svelte";
+    
+    interface Props {
+        children?: import("svelte").Snippet;
+    }
 
-    $: pageName = $page.url.pathname.split(/(\/)/).filter(Boolean).pop();
+    let { children }: Props = $props();
+
+    let pageName = $derived($page.url.pathname.split(/(\/)/).filter(Boolean).pop());
 </script>
 
 <svelte:head>
@@ -12,14 +18,14 @@
 </svelte:head>
 
 {#if pageName === "/"}
-    <div id="background-image" />
-    <div id="gradient" />
+    <div id="background-image"></div>
+    <div id="gradient"></div>
     <Pattern />
 {/if}
 <div id="main-container">
     <Navbar />
     <div id="page">
-        <slot />
+        {@render children?.()}
     </div>
 </div>
 
