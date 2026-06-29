@@ -2,7 +2,7 @@
     <h1>Lucas Chardonnet</h1>
     <p>
         <span>Software Engineering</span><br />
-        & <span>Digital Art</span>
+        <span>Digital Art</span>
     </p>
 </div>
 

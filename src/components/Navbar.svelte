@@ -6,17 +6,11 @@
         { label: "/home", link: "/" },
         { label: "/dev", link: "" },
         { label: "/art", link: "/art" },
-        { label: "/blog", link: "" }
     ];
 
     const socials: { label: string; link: string; isHighlighted: boolean }[] = [
         { label: "email", link: "mailto:lucas.chardonnet1@gmail.com", isHighlighted: true },
         { label: "github", link: "https://github.com/clau555", isHighlighted: false },
-        {
-            label: "linkedin",
-            link: "https://www.linkedin.com/in/lucas-chardonnet/",
-            isHighlighted: false
-        }
     ];
 
     let pannelOpened: boolean = $state(false);
@@ -40,7 +34,7 @@
         <ThemeSwitcher />
     </div>
     <div class="mobile menu">
-        <button onclick={togglePannel}>
+        <button onclick={togglePannel} aria-label="menu">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
